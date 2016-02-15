@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>tmset test</title>
+		<script type="text/javascript" src="../lib/ndevent.js"></script>
+		<script type="text/javascript" src="../lib/tmset.js"></script>
+	</head>
+	<body>
+		<script>
+			var settings = new tmset.Settings({
+				test1: {
+					default: false,
+					ui: {
+						type: "checkbox",
+						label: "Test 1",
+						tooltip: "Test 1 tooltip",
+					}
+				},
+				test2: {
+					default: true,
+					ui: {
+						group: "Enable_If test",
+						type: "checkbox",
+						label: "Enable below box",
+					},
+				},
+				test3: {
+					default: false,
+					ui: {
+						group: "Enable_If test",
+						type: "checkbox",
+						label: "Enabled only in conjunction with the above",
+						enable_if: function(settings) {
+							return settings.test2;
+						},
+					},
+				},
+			});
+			var ui = new tmset.SettingsUI(settings);
+			document.body.appendChild(ui.dom);
+		</script>
+	</body>
+</html>
