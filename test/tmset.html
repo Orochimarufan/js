@@ -35,6 +35,34 @@
 						},
 					},
 				},
+				t_nu_1: {
+					default: 0,
+					ui: {
+						group: "Numbers",
+						type: "number",
+						label: "Number value",
+					},
+				},
+				t_num_2: {
+					default: 10,
+					ui: {
+						group: "Numbers",
+						type: "range",
+						min: 10,
+						max: 1000,
+						label: "Range",
+					},
+				},
+				t_num_3: {
+					default: 5,
+					ui: {
+						group: "Numbers",
+						type: "number",
+						min: 1,
+						step: 1,
+						label: "Positive number",
+					},
+				},
 			});
 			var ui = new tmset.SettingsUI(settings);
 			document.body.appendChild(ui.dom);

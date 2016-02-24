@@ -4,18 +4,18 @@ Repository of miscellaneous JavaScript things.
 
 Lib
 ---
-This directory holds various utility libraries.
+This directory holds various utility libraries:
 * ndevent.js -- Very simple DOM-Level2-style Event dispatch library
 * tmset.js -- JavaScript configuration framework, with HTML UI generation
 
 Test
 ----
-Contains tests for above libraries
+Contains tests for above libraries:
 * tmset.html
 
-Userscripts
------------
-Contains my Userscript collection. Usually tested with Tampermonkey Beta on latest Chromium
+Userscript
+----------
+Contains my Userscript collection. Usually tested with Tampermonkey Beta on latest Chromium.
 
 License
 =======
