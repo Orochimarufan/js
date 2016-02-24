@@ -8,6 +8,11 @@ This directory holds various utility libraries:
 * ndevent.js -- Very simple DOM-Level2-style Event dispatch library
 * tmset.js -- JavaScript configuration framework, with HTML UI generation
 
+CSS
+---
+Contains CSS files to style DOM-related libraries:
+* tmset/simple-default.css
+
 Test
 ----
 Contains tests for above libraries:

@@ -1,0 +1,15 @@
+.settings_generic_input_class:not(.settings_gic_postfix_label) > input {
+	float: right;
+}
+.settings_form {
+	display: inline-block;
+}
+.settings_generic_input_class div:not(.settings_class_checkbox) > input {
+	width: 15em;
+}
+.settings_option {
+	padding: 5px 0px;
+}
+.settings_generic_input_class > * {
+	padding: 0px 2px;
+}
