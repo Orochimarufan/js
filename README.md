@@ -5,6 +5,7 @@ Repository of miscellaneous JavaScript things.
 Lib
 ---
 This directory holds various utility libraries:
+* tmisc.js -- Collection of basic misc. utilities
 * ndevent.js -- Very simple DOM-Level2-style Event dispatch library
 * tmset.js -- JavaScript configuration framework, with HTML UI generation
 
