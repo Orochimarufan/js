@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>FormSpec test</title>
+		<meta charset="utf-8">
+		<script src="../lib/tmisc.js"></script>
+		<script src="../lib/ndevent.js"></script>
+		<script src="../lib/formspec.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.24.3/css/uikit.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.24.3/css/uikit.almost-flat.min.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.24.3/js/uikit.min.js"></script>
+		<style>
+			.choice {
+				min-width: 120px;
+			}
+		</style>
+	</head>
+	<body class="uk-container uk-container-center">
+		<div class="uk-panel uk-panel-box" id="form"></div>
+		<script>
+			var form = new formspec.Form({
+				style: {
+					form_style: "uk-form-horizontal",
+				},
+				fields: [
+					{
+						name: "employee",
+						label: "Mitarbeiter",
+						type: "textbox",
+					},
+					{
+						name: "computer",
+						label: "Rechner",
+						type: "textbox",
+					},
+					{
+						name: "ip-address",
+						label: "IP-Adresse",
+						type: "textbox",
+					},
+					{
+						type: "labeled",
+						name: "backup",
+						label: "Regelmäßige Backups",
+						field: {
+							type: "multiple_choice",
+							choices: [
+								{
+									name: "auto",
+									label: "Automatisch",
+								},
+								{
+									name: "manual",
+									label: "Manuell",
+								},
+							],
+						},
+					},
+					{
+						type: "labeled",
+						name: "backup-destination",
+						label: "Backup-Datenträger",
+						field: {
+							type: "multiple_choice",
+							as_list: true,
+							choices: [
+								{
+									name: "external",
+									label: "Externe Festplatte",
+								},
+								{
+									name: "timemachine",
+									label: "Time Machine",
+								},
+							],
+							others_choice: {
+								name: "others",
+								label: "Sonstige",
+							},
+						},
+					},
+				],
+			});
+			document.getElementById("form").appendChild(form.dom);
+		</script>
+	</body>
+</html>

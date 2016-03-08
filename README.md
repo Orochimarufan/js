@@ -8,6 +8,7 @@ This directory holds various utility libraries:
 * tmisc.js -- Collection of basic misc. utilities
 * ndevent.js -- Very simple DOM-Level2-style Event dispatch library
 * tmset.js -- JavaScript configuration framework, with HTML UI generation
+* formspec.js -- Form generation library, further pursuing the idea of tmset's UI generation
 
 CSS
 ---
@@ -18,6 +19,7 @@ Test
 ----
 Contains tests for above libraries:
 * tmset.html
+* formspec.html
 
 Userscript
 ----------
